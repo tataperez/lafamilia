@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Familia Barbershop - Tradición y Estilo</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="IMG/logo.jpg" alt="Logo La Familia Barbershop">
+                <h1>La Familia Barbershop</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="Labarberia.html">La Barberia</a></li>
+                    <li><a href="Servicios.html">Servicios</a></li>
+                    <li><a href="Galeria.html">Galería</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contacto -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Visítanos</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Carrera 25 aa # 56-76, Medellin-Antioquia.Colombia</p>
+                    <p><i class="fas fa-phone"></i> +57 3173036770</p>
+                    <p><i class="fas fa-envelope"></i> info@lafamiliabarbershop.com</p>
+                    <p><i class="fas fa-clock"></i> Lunes a Sábado: 9:00 AM - 7:00 PM</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/16NGNnzQKv/?mibextid=wwXIfr" target="_blank"><img src="IMG/facebook.png" alt="Facebook"></a>
+                        <a href="https://wa.me/3173036770" target="_blank"><img src="IMG/whatsapp.png" alt="WhatsApp"></a>
+                        <a href="https://www.instagram.com/lafamiliabarbershop___?igsh=c29tcGs2YWs1a2Mz" target="_blank"><img src="IMG/Instagram.png" alt="Instagram"></a>
+                    </div>
+                    
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.144863083514!2d-75.54834142575326!3d6.244632526342719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428617ab314a3%3A0x1f9e485a341d6536!2sCra.%2025aa%20%2356-76%2C%20Medell%C3%ADn%2C%20Villa%20Hermosa%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1746983872056!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envíanos un mensaje</h3>
+                    <form action="/api/submit-form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <strong>La Familia Barbershop</strong>. Todos los derechos reservados.</p>
+            <p>Diseñado con pasión por el arte de la barbería clásica</p>
+        </div>
+    </footer>
+</body>
+</html>

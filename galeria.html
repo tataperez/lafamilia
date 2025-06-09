@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Familia Barbershop - Nuestra Historia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="IMG/logo.jpg" alt="Logo La Familia Barbershop">
+                <h1>La Familia Barbershop</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="labarberia.html">La Barberia</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección del Equipo con Carousel Bootstrap -->
+    <section class="carousel-section" id="equipo">
+        <div class="container">
+            <div class="section-title">
+                <h2>GALERIA</h2>
+            </div>
+            
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="IMG/BARBERO1.jpg" class="d-block w-100" alt="Barbero 1">
+                       
+                    </div>
+                    <div class="carousel-item">
+                        <img src="IMG/corte10.jpg" class="d-block w-100" alt="Barbero 2">
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="IMG/corte11.jpg" class="d-block w-100" alt="Barbero 3">
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <img src="IMG/corte9.jpg" class="d-block w-100" alt="Barbero 4">
+                      
+                </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </button>
+            </div>
+        </div>
+   <section class="banner-mid-section">
+    <div class="container">
+        <div class="banner-mid-content">
+            <h2>Transforma Tu Estilo</h2>
+            <p>Descubre el arte de la barbería tradicional y moderna. Cortes, afeitados y tratamientos que realzan tu personalidad.</p>
+            <a href="https://wa.me/3173036770" class="btn" target="_blank">Agenda Tu Cita Ahora</a>
+        </div>
+    </div>
+</section>
+    </div>
+</section>
+</section>
+    </section>
+      <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestro Trabajo</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="IMG/corte1.jpeg" alt="Trabajo 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG/corte2.jpeg"Trabajo 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG/corte3.jpeg" alt="Trabajo 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG/corte4.jpeg" alt="Trabajo 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG/corte5.jpeg" alt="Trabajo 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG/corte6.jpeg" alt="Trabajo 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG/corte7.jpeg" alt="Trabajo 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG/corte8.jpeg" alt="Trabajo 8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+            <p>&copy; 2025 La Familia Barbershop. Todos los derechos reservados.</p>
+            <p>Diseñado con pasión por el arte de la barbería clásica</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Efecto de header al hacer scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.boxShadow = 'none';
+            }
+        });
+        
+        // Smooth scrolling para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Efecto de hover en los valores
+        const valoresItems = document.querySelectorAll('.valores li');
+        valoresItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+            });
+        });
+    </script>
+</body>
+</html>

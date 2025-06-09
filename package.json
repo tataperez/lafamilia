@@ -1,0 +1,16 @@
+{
+  "name": "barbershop-vercel-backend",
+  "version": "1.0.0",
+  "description": "Backend para el formulario de la barbería en Vercel",
+  "main": "api/submit-form.js",
+  "scripts": {
+    "start": "node api/submit-form.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.x.x", 
+    "nodemailer": "^6.9.13" 
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
