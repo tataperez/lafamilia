@@ -5,100 +5,197 @@
             --color-beige: #D9C3B0;      /* Textos claros */
             --color-gris: #3B393A;       /* Fondos secundarios */
         }
+
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rye", serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: var(--color-oscuro);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header estilo barbería */
+header {
+    background-color: var(--color-oscuro);
+    padding: 15px 0;
+    position: fixed; /* Mantiene el header fijo en la parte superior */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    border-bottom: 2px solid var(--color-dorado);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Permite que el logo y el nav se separen */
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; /* Ajusta si es necesario */
+    margin-right: 15px;
+}
+
+.logo h1 {
+    color: var(--color-dorado);
+    font-size: 28px; /* Ajusta si es necesario */
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap; /* Evita que el texto del título se rompa en varias líneas */
+}
+
+/* --- ESTILOS DE ESCRITORIO POR DEFECTO --- */
+/* Estos estilos aplican en pantallas grandes. Asegúrate de que no estén dentro de ninguna media query. */
+.main-nav {
+    display: block; /* La navegación es visible como un bloque por defecto */
+}
+
+.main-nav ul {
+    display: flex; /* Los elementos de la lista se muestran en línea (horizontalmente) */
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0; /* Asegura que no haya márgenes no deseados */
+    padding: 0; /* Asegura que no haya paddings no deseados */
+}
+
+.main-nav ul li {
+    margin-left: 30px; /* Espacio entre los elementos del menú */
+    position: relative;
+}
+
+.main-nav ul li a {
+    color: var(--color-beige);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 22px; /* Ajusta el tamaño de la fuente del menú */
+    transition: color 0.3s;
+    letter-spacing: 1px;
+    white-space: nowrap; /* Evita que los enlaces se rompan en varias líneas */
+}
+
+.main-nav ul li a:hover {
+    color: var(--color-dorado);
+}
+
+.main-nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-dorado);
+    transition: width 0.3s;
+}
+
+.main-nav ul li:hover::after {
+    width: 100%;
+}
+
+/* --- ESTILOS PARA EL MENÚ HAMBURGUESA (OCULTO EN ESCRITORIO) --- */
+.hamburger-menu {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Para que esté por encima del menú desplegable */
+    color: var(--color-dorado);
+    font-size: 28px;
+}
+
+/* --------------------------------------------------------------- */
+/* --- MEDIA QUERIES PARA MENÚ RESPONSIVO (APLICAN SOLO EN PANTALLAS PEQUEÑAS) --- */
+@media (max-width: 768px) {
+    /* Mostrar el botón de hamburguesa */
+    .hamburger-menu {
+        display: block; 
+    }
+
+    /* Ocultar la navegación por defecto y prepararla para el despliegue */
+    .main-nav {
+        position: absolute;
+        top: 100%; /* Posiciona el menú justo debajo del header */
+        left: 0;
+        width: 100%;
+        background-color: var(--color-oscuro);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        padding: 20px 0;
+        border-top: 1px solid var(--color-medio);
         
-        /* Reset y estilos generales */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Rye", serif;
-        }
-        
-        body {
-            background-color: #f9f9f9;
-            color: var(--color-oscuro);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header estilo barbería */
-        header {
-            background-color: var(--color-oscuro);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--color-dorado);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 60px;
-            margin-right: 15px;
-        }
-        
-        .logo h1 {
-            color: var(--color-dorado);
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-            position: relative;
-        }
-        
-        nav ul li a {
-            color: var(--color-beige);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 22px;
-            transition: color 0.3s;
-            letter-spacing: 1px;
-        }
-        
-        nav ul li a:hover {
-            color: var(--color-dorado);
-        }
-        
-        nav ul li::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--color-dorado);
-            transition: width 0.3s;
-        }
-        
-        nav ul li:hover::after {
-            width: 100%;
-        }
-        
+        /* Inicialmente oculto y transformado hacia arriba */
+        transform: translateY(-100%); 
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease-out, opacity 0.4s ease-out, visibility 0.4s;
+        z-index: 999; /* Asegura que el menú esté sobre el contenido */
+    }
+
+    /* Clase que se activa con JavaScript para mostrar el menú */
+    .main-nav.active {
+        transform: translateY(0); /* Desliza el menú hacia abajo */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Apila los elementos del menú verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+        margin: 0; /* Reinicia márgenes */
+        padding: 0; /* Reinicia paddings */
+    }
+
+    .main-nav ul li {
+        margin: 15px 0; /* Espacio vertical entre los elementos del menú */
+    }
+
+    .main-nav ul li a {
+        font-size: 1.8rem; /* Aumenta el tamaño para facilitar la interacción táctil */
+        padding: 10px 20px;
+        display: block; /* Hace que el área de clic sea más grande */
+    }
+
+    /* Eliminar la animación de subrayado para móviles, ya que no es ideal en menú vertical */
+    .main-nav ul li::after {
+        display: none;
+    }
+
+    /* Ajustes específicos para el logo y título en pantallas más pequeñas */
+    .logo h1 {
+        font-size: 24px; /* Un poco más pequeño para dejar espacio */
+    }
+    .logo img {
+        height: 50px; /* Un poco más pequeño */
+    }
+}
+
+/* Media query para pantallas muy pequeñas, si es necesario ajustar aún más */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 20px;
+    }
+    .logo img {
+        height: 45px;
+    }
+}
+
         /* Hero Section con video de fondo */
         .hero {
             height: 100vh;
